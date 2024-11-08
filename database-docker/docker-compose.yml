@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    container_name: teste-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: meu_banco
+    ports:
+      - "15432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data  # Volumes persistentes
+
+# Volumes para persistência dos dados
+volumes:
+  pgdata:
