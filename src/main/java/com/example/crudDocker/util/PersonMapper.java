@@ -3,10 +3,12 @@ package com.example.crudDocker.util;
 import com.example.crudDocker.dto.request.PersonRequestDTO;
 import com.example.crudDocker.dto.response.PersonResponseDTO;
 import com.example.crudDocker.entity.Person;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class PersonMapper {
 
     public Person toPerson(PersonRequestDTO personDTO){

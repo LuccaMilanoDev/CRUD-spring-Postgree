@@ -39,7 +39,7 @@ public class PersonServiceImpl implements PersonService{
 
 
     @Override
-    public PersonResponseDTO upadte(PersonRequestDTO personDTO, Long id) {
+    public PersonResponseDTO update(PersonRequestDTO personDTO, Long id) {
         Person person = returnUser(id);
 
         personMapper.updatePersonData(person, personDTO);
