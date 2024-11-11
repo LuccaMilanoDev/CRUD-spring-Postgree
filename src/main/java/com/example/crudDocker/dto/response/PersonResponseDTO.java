@@ -1,7 +1,9 @@
 package com.example.crudDocker.dto.response;
 
 import com.example.crudDocker.entity.Person;
+import lombok.Getter;
 
+@Getter
 public class PersonResponseDTO {
 
     private Long id;

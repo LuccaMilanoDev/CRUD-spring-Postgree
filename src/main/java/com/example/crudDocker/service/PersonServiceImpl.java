@@ -44,13 +44,13 @@ public class PersonServiceImpl implements PersonService{
 
         personMapper.updatePersonData(person, personDTO);
 
-        personRepository.save(person);
         return personMapper.toPersonDTO(personRepository.save(person));
     }
 
     @Override
     public String delete(Long id) {
-        return "";
+        personRepository.deleteById(id);
+        return "Person id:"+id+" deleted";
     }
 
     private Person returnUser(Long id){
